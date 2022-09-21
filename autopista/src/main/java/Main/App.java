@@ -26,7 +26,7 @@ public class App
         System.out.println( "\n TARIFA ESPECIAL" );
         
         System.out.println( "\n RECOJA SU TICKET DE ENTRADA" );
-        Ticket bus = new TicketEspecial(200.0,1.0);
+        Ticket bus = new TicketEspecial(200.0,1.0,12);
         System.out.println(bus.toString());
         
         System.out.println( "\n RECOJA SU TICKET DE SALIDA" );
