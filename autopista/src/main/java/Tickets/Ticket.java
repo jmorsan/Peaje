@@ -37,7 +37,7 @@ public abstract class Ticket implements ITicket
 
 	@Override
 	public String toString() {
-		return "Ticket [entrada=" + entrada + ", preciokm=" + preciokm + "]";
+		return "\n Entrada: " + entrada + " \n Precio km: " + preciokm;
 	}
 	
 	
