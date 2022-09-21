@@ -50,13 +50,15 @@ public class TicketGeneral extends Ticket
 		Ticket tmpTicket=(Ticket)o;
 		
 		
-		if(o instanceof TicketEspecial)
+		if(o instanceof TicketGeneral)
 		{
+			if(this.getEntrada()==tmpTicket.getEntrada() && this.getPreciokm()==tmpTicket.getPreciokm() )
+			{
+
+			return true;
 			
-			return true;
-		}else if(this.getEntrada()==tmpTicket.getEntrada() && this.getPreciokm()==tmpTicket.getPreciokm() )
-		{
-			return true;
+			}
+			
 		}
 		
 		return false;

@@ -57,21 +57,21 @@ public class TicketEspecial extends Ticket
 	public boolean equals(Object o)
 	{
 		
-		TicketEspecial tmpTicket=(TicketEspecial)o;
-		
 		
 		if(o instanceof TicketEspecial)
 		{
-			
-			return true;
-		}else if(this.getEntrada()==tmpTicket.getEntrada() && this.getPreciokm()==tmpTicket.getPreciokm() && this.getPasajeros()==tmpTicket.getPasajeros() )
-		{
-			return true;
-		}
-		
-		
-		System.out.println();
 
+			TicketEspecial tmpTicketEspecial=(TicketEspecial)o;
+
+			if(this.getEntrada() == tmpTicketEspecial.getEntrada() && this.getPreciokm() == tmpTicketEspecial.getPreciokm() && this.getPasajeros()==tmpTicketEspecial.getPasajeros() )
+			{
+
+				return true;
+
+			}	
+			
+		} 
+		
 		return false;
 		
 	}
