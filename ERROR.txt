@@ -1,0 +1,6 @@
+sept 22, 2022 5:34:22 P.�M. App main
+INFO: Bitacora inicializada
+sept 22, 2022 5:34:22 P.�M. App main
+INFO: Llamadas a los componentes del sistema
+sept 22, 2022 5:34:22 P.�M. App main
+INFO: Probando manejo de excepciones
