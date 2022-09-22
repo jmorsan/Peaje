@@ -1,11 +1,15 @@
 package Tickets;
-
+/**
+ * Clase para crear Ticket Generales.
+ */
 public class TicketGeneral extends Ticket
 {
 	
 	
 	
-
+	/** 
+	 * Constructor Ticket Generales
+	**/
 	public TicketGeneral(double entrada, double preciokm)
 	{
 		super(entrada, preciokm);

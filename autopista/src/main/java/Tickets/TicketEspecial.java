@@ -1,11 +1,16 @@
 package Tickets;
 
 import java.util.Scanner;
-
+/**
+ * Clase para crear Ticket Especiales.
+ */
 public class TicketEspecial extends Ticket
 {
 	private int pasajeros;
 
+	/** 
+	 * Constructor Ticket Generales
+	**/
 	public TicketEspecial(Double entrada, Double preciokm,int pasajeros)
 	{
 		super(entrada, preciokm);
@@ -13,13 +18,18 @@ public class TicketEspecial extends Ticket
 		this.pasajeros=pasajeros;
 		
 	}
-
+	/**
+	 * Metodo para obtener el numerode pasajeros.
+	 * @return numero de pasajeros.
+	 */
 	public int getPasajeros() {
 		return pasajeros;
 	}
 
 	
-
+	/**
+	 * Metodo para calcular la tarifa
+	 */
 	@Override
 	public double calcularTarifa(double salida)
 	{
