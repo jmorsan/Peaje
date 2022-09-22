@@ -16,7 +16,9 @@ public class TicketGeneral extends Ticket
 		
 	}
 	
-
+	/**
+	 * Metodo para calcular la tarifa y mostrar el ticket de salid
+	 */
 	@Override
 	public double calcularTarifa(double salida)
 	{
@@ -35,18 +37,29 @@ public class TicketGeneral extends Ticket
 			tarifa=(totalkm*this.getPreciokm());
 		}
 		
-		System.out.println("\n Entrada: "+ this.getEntrada() +"\n Salida: " + salida + "\n Total a pagar: " + tarifa );
+		mostrarTicketSalida(tarifa, salida);
 		
 		return tarifa;
 	}
 
+	public void mostrarTicketSalida(double tarifa, double salida){
+		
+		System.out.println("\n Entrada: "+ this.getEntrada() +"\n Salida: " + salida + "\n Total a pagar: " + tarifa); 
 
+	}
+
+	/*
+	 * Metodo sobreescrito para mostrar el ticket de entrada
+	 */
 	@Override
 	public String toString() {
 		
 		return super.toString();
 	}
 	
+	/*
+	 * Metodo equals para comparar tickets entre si.
+	 */
 	@Override
 	public boolean equals(Object o)
 	{

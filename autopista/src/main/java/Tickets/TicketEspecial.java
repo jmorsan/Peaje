@@ -1,6 +1,5 @@
 package Tickets;
 
-import java.util.Scanner;
 /**
  * Clase para crear Ticket Especiales.
  */
@@ -28,41 +27,49 @@ public class TicketEspecial extends Ticket
 
 	
 	/**
-	 * Metodo para calcular la tarifa
+	 * Metodo para calcular la tarifa y mostrar el ticket de salid
 	 */
 	@Override
 	public double calcularTarifa(double salida)
 	{
-		
-		
 		double tarifa=0.0;
 		double totalkm=salida-getEntrada();
 		totalkm=Math.abs(totalkm);
-		double reduccion=0.05;
 		
 		
 		
-		if(totalkm>100)
+		if(totalkm>Constants.REDUCCION_ESPECIAL_KM_MIN)
 		{
-			tarifa=(double)(totalkm*getPreciokm()*this.pasajeros)-((totalkm*getPreciokm())*reduccion);
+			tarifa=(double)(totalkm*getPreciokm()*this.pasajeros)-((totalkm*getPreciokm())* Constants.REDUCCION_ESPECIAL_PORCENTAJE);
 			
 		}else
 		{
 			tarifa=(totalkm*this.getPreciokm()*this.pasajeros);
 		}
 		
-		System.out.println("\n Entrada: "+ this.getEntrada() +"\n Salida: " + salida + "\n Total a pagar: " + tarifa );
-		
-		
+		mostrarTicketSalida(tarifa, salida);
+
 		return tarifa;
 	}
 
+	public void mostrarTicketSalida(double tarifa, double salida){
+		
+		System.out.println("\n Entrada: "+ this.getEntrada() +"\n Salida: " + salida + "\n Total a pagar: " + tarifa); 
+
+	}
+
+	/*
+	 * Metodo sobreescrito para mostrar el ticket de entrada
+	 */
 	@Override
 	public String toString() {
 		
 		return super.toString();
 	}
 	
+	/*
+	 * Metodo equals para comparar tickets entre si.
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
